@@ -3,7 +3,7 @@
 # https://guides.rubygems.org/specification-reference/#summary
 Gem::Specification.new do |spec|
   spec.name          = 'image-charts'
-  spec.version="5.0.1"
+  spec.version='5.0.0'
   spec.authors       = ['Francois-Guillaume Ribreau']
   spec.email         = ['github@fgribreau.com']
 
