@@ -480,6 +480,28 @@ class ImageCharts
       _clone 'icretina', value
     end
   
+    # Background color for QR Codes
+    #
+    # [Reference documentation]{@link https://documentation.image-charts.com/qr-codes/#background-color}
+    # # @example
+    # chart = ImageCharts().icqrb('FFFFFF')
+    # @default 'FFFFFF'
+    # Background color for QR Codes
+    def icqrb(value)
+      _clone 'icqrb', value
+    end
+  
+    # Foreground color for QR Codes
+    #
+    # [Reference documentation]{@link https://documentation.image-charts.com/qr-codes/#foreground-color}
+    # # @example
+    # chart = ImageCharts().icqrf('000000')
+    # @default '000000'
+    # Foreground color for QR Codes
+    def icqrf(value)
+      _clone 'icqrf', value
+    end
+  
 
   private
 

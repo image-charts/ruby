@@ -20,12 +20,16 @@ class TestImageCharts < MiniTest::Test
 
   def test_exposes_parameters_and_use_them
     chart = ImageCharts()
+    query = ''
 
     chart.public_methods(false)
         .find_all {|method| method.to_s.start_with?('c') || method.to_s.start_with?('ic') }
-        .each{|method_name| chart = chart.public_send(method_name, 'plop')}
+        .each do |method_name|
+            chart = chart.public_send(method_name, 'plop')
+            query += "&#{method_name}=plop"
+        end
 
-    assert_equal chart.to_url, 'https://image-charts.com:443/chart?cht=plop&chd=plop&chds=plop&choe=plop&chld=plop&chxr=plop&chof=plop&chs=plop&chdl=plop&chdls=plop&chg=plop&chco=plop&chtt=plop&chts=plop&chxt=plop&chxl=plop&chxs=plop&chm=plop&chls=plop&chl=plop&chma=plop&chdlp=plop&chf=plop&chan=plop&chli=plop&icac=plop&ichm=plop&icff=plop&icfs=plop&iclocale=plop&icretina=plop'
+    assert_equal chart.to_url, "https://image-charts.com:443/chart?#{query[1..-1]}"
   end
 
 
