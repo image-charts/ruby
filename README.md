@@ -30,7 +30,7 @@ gem install image-charts
 #### 2. Import Image-Charts library
 
 ```ruby
-require 'imagecharts'
+require 'image-charts'
 ```
 
 #### 3. Generate a chart image
