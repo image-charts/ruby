@@ -2,18 +2,10 @@
 
 [![Gem](https://img.shields.io/gem/v/image-charts)](https://rubygems.org/gems/image-charts)
 [![maintainability](https://app.codacy.com/project/badge/Grade/b8c5b022ccab4bb2bd9af7663174c84f)](https://codeclimate.com/github/image-charts/ruby/maintainability)
-<!--[![test coverage](https://api.codeclimate.com/v1/badges/8ae1208964cbea39150a/test_coverage)](https://codeclimate.com/github/image-charts/javascript/test_coverage)
 
-
-[![DEPENDENCY STATUS](http://img.shields.io/david/image-charts/javascript.svg?style=flat)](https://david-dm.org/image-charts/javascript)
-[![DEVDEPENDENCY STATUS](http://img.shields.io/david/dev/image-charts/javascript.svg?style=flat)](https://david-dm.org/image-charts/javascript#info=devDependencies)
--->
-
-<!--
-[![NPM MONTHLY](http://img.shields.io/npm/dm/image-charts.svg?style=flat)](http://npm-stat.com/charts.html?package=image-charts)
-![NPM YEARLY](https://img.shields.io/npm/dy/image-charts.svg)
-![NPM TOTAL](https://img.shields.io/npm/dt/image-charts.svg)
--->
+![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/image-charts/ruby)
+![Code Climate technical debt](https://img.shields.io/codeclimate/tech-debt/image-charts/ruby)
+![Code Climate issues](https://img.shields.io/codeclimate/issues/image-charts/ruby)
 
 Official [Image Charts](https://image-charts.com/) API client.
 Generate URLs of static image charts.
