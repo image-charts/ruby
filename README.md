@@ -4,8 +4,8 @@
 [![maintainability](https://app.codacy.com/project/badge/Grade/b8c5b022ccab4bb2bd9af7663174c84f)](https://codeclimate.com/github/image-charts/ruby/maintainability)
 
 ![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/image-charts/ruby)
-![Code Climate technical debt](https://img.shields.io/codeclimate/tech-debt/image-charts/ruby)
-![Code Climate issues](https://img.shields.io/codeclimate/issues/image-charts/ruby)
+
+
 
 Official [Image Charts](https://image-charts.com/) API client.
 Generate URLs of static image charts.
