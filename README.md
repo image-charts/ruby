@@ -433,7 +433,7 @@ Other allowed values are: <pre>p | p3 | pc | pd | ls | lc | lxy | ls:nda | lc:nd
 <a name="chof"></a>
 #### `chof( value )` : [`ImageCharts`](#constructor)
 
-> Output fake format
+> Image output format
 
 > [Reference](https://documentation.image-charts.com/reference/output-format/)
 
@@ -443,6 +443,8 @@ Other allowed values are: <pre>p | p3 | pc | pd | ls | lc | lxy | ls:nda | lc:nd
 
 
 <a href="https://editor.image-charts.com/#https:/image-charts.com/chart?chd=a%3A30010%2C-30000%2C50000%2C80000%2C20000&chdl=Income&chf=b0%2Clg%2C90%2CEA469EFF%2C1%2C03A9F47C%2C0.4&chl=2014%7C2015%7C2016%7C2017%7C2018&chs=700x300&cht=bvs&chxt=y&chof=.png" target="_blank"><pre>.chof(".png")</pre></a>
+<a href="https://editor.image-charts.com/#https:/image-charts.com/chart?chd=a%3A30010%2C-30000%2C50000%2C80000%2C20000&chdl=Income&chf=b0%2Clg%2C90%2CEA469EFF%2C1%2C03A9F47C%2C0.4&chl=2014%7C2015%7C2016%7C2017%7C2018&chs=700x300&cht=bvs&chxt=y&chof=.svg" target="_blank"><pre>.chof(".svg")</pre></a>
+<a href="https://editor.image-charts.com/#https:/image-charts.com/chart?chd=a%3A30010%2C-30000%2C50000%2C80000%2C20000&chdl=Income&chf=b0%2Clg%2C90%2CEA469EFF%2C1%2C03A9F47C%2C0.4&chl=2014%7C2015%7C2016%7C2017%7C2018&chs=700x300&cht=bvs&chxt=y&chof=.gif" target="_blank"><pre>.chof(".gif")</pre></a>
 
 - _[Back to Getting started](#getting-started)_
 - _[Back to ToC](#table-of-contents)_
