@@ -389,6 +389,18 @@ class ImageCharts
       _clone 'chf', value
     end
   
+    # Bar corner radius. Display bars with rounded corner.
+    #
+    # [Reference documentation]{@link https://documentation.image-charts.com/bar-charts/#rounded-bar}
+    # # @example
+    # chart = ImageCharts().chbr('5')
+    # chart = ImageCharts().chbr('10')
+    # 
+    # Bar corner radius. Display bars with rounded corner.
+    def chbr(value)
+      _clone 'chbr', value
+    end
+  
     # gif configuration
     #
     # [Reference documentation]{@link https://documentation.image-charts.com/reference/animation/}
