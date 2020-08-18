@@ -355,6 +355,18 @@ class ImageCharts
       _clone 'chl', value
     end
   
+    # Position and style of labels on data
+    #
+    # [Reference documentation]{@link https://documentation.image-charts.com/reference/chart-label/}
+    # # @example
+    # chart = ImageCharts().chlps('align,top|offset,10|color,FF00FF')
+    # chart = ImageCharts().chlps('align,top|offset,10|color,FF00FF')
+    # 
+    # Position and style of labels on data
+    def chlps(value)
+      _clone 'chlps', value
+    end
+  
     # chart margins
     #
     # [Reference documentation]{@link https://documentation.image-charts.com/reference/chart-margin/}
