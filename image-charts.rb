@@ -228,6 +228,8 @@ class ImageCharts
     # # @example
     # chart = ImageCharts().chg('1,1')
     # chart = ImageCharts().chg('0,1,1,5')
+    # chart = ImageCharts().chg('1,1,FF00FF')
+    # chart = ImageCharts().chg('1,1,1,1,CECECE')
     # 
     # Solid or dotted grid lines
     def chg(value)
