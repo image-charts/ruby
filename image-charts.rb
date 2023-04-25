@@ -561,5 +561,10 @@ end
 
 
 def ImageCharts(*args)
-  ImageCharts.new(*args)
+  if RUBY_VERSION.to_i >= 3
+    args.any? ? ImageCharts.new(**args[0]) : ImageCharts.new(*args)
+
+  else
+    ImageCharts.new(*args)
+  end
 end
