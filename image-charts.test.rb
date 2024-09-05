@@ -5,9 +5,9 @@ require 'minitest/autorun'
 require_relative './image-charts.rb'
 
 
-class TestImageCharts < MiniTest::Test
+class TestImageCharts < Minitest::Test
 
-  def test_can_instance_without_new
+def test_can_instance_without_new
     inst = ImageCharts()
     assert inst.instance_of? ImageCharts
   end
@@ -56,7 +56,7 @@ class TestImageCharts < MiniTest::Test
     err = assert_raises Net::OpenTimeout do
       ImageCharts(timeout: 0.01).cht('p').chd('t:1,2,3').chs('100x100').chan('1200').to_blob
     end
-    assert_equal 'execution expired', err.message
+    assert_equal 'Failed to open TCP connection to image-charts.com:443 (execution expired)', err.message
   end
 
   def test_to_blob_works

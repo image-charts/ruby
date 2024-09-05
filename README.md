@@ -1,7 +1,7 @@
 [![image charts ruby library logo](./logo.jpg)](#getting-started)
 
 [![Gem](https://img.shields.io/gem/v/image-charts)](https://rubygems.org/gems/image-charts)
-[![maintainability](https://app.codacy.com/project/badge/Grade/b8c5b022ccab4bb2bd9af7663174c84f)](https://codeclimate.com/github/image-charts/ruby/maintainability)
+![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/image-charts/ruby)
 
 ![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/image-charts/ruby)
 

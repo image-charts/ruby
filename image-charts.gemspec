@@ -3,7 +3,7 @@
 # https://guides.rubygems.org/specification-reference/#summary
 Gem::Specification.new do |spec|
   spec.name          = 'image-charts'
-  spec.version="6.1.1"
+  spec.version='5.0.0'
   spec.authors       = ['Francois-Guillaume Ribreau']
   spec.email         = ['github@fgribreau.com']
 
@@ -20,5 +20,5 @@ Gem::Specification.new do |spec|
     "homepage_uri"      => "https://www.image-charts.com",
     "source_code_uri"   => "https://github.com/image-charts/ruby/"
   }
-  spec.add_development_dependency 'minitest', '~>5.14'
+  spec.add_development_dependency 'minitest', '~>5.25'
 end
