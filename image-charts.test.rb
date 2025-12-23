@@ -7,6 +7,11 @@ require_relative './image-charts.rb'
 
 class TestImageCharts < Minitest::Test
 
+  def setup
+    # Add 1000ms delay between tests to avoid 429 rate limiting
+    sleep(1.0)
+  end
+
 def test_can_instance_without_new
     inst = ImageCharts()
     assert inst.instance_of? ImageCharts

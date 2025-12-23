@@ -66,13 +66,13 @@ class ImageCharts
 
      message = if validation_message && validation_message.length > 0 then
         JSON.parse(validation_message).map {|x| x['message']}.join("\n")
-     elsif validation_code.length > 0 then
+     elsif validation_code && validation_code.length > 0 then
         validation_code
      else
         res.code.to_s
      end
 
-     raise ImageChartsError.new(message, (validation_code || res.statusText), res.code)
+     raise ImageChartsError.new(message, (validation_code || "HTTP_#{res.code}"), res.code)
    end
 
    #
