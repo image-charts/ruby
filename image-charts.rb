@@ -14,7 +14,7 @@ require 'base64'
 class ImageCharts
   attr_reader :request_headers, :_protocol, :_host, :_port, :_pathname, :_timeout, :_query
 
-  def initialize(secret: nil, protocol: 'https', host: 'image-charts.com', port: 443, timeout: 5000, previous: nil)
+  def initialize(secret: nil, protocol: 'https', host: 'image-charts.com', port: 443, timeout: 5000, user_agent: nil, previous: nil)
     @_protocol = protocol
     @_host = host
     @_port = port
@@ -22,6 +22,7 @@ class ImageCharts
     @_timeout = timeout
     @_query = if previous then previous else Hash.new(0) end
     @_secret = secret
+    @_user_agent = user_agent
   end
 
   #
@@ -46,7 +47,8 @@ class ImageCharts
    def to_blob()
 
      spec = Gem.loaded_specs["image-charts"]
-     @request_headers = {"user-agent" => "ruby-image-charts/" + (if spec then spec.version.to_s else 'latest' end) + (if @_query.has_key?('icac') then " (#{@_query['icac']})" else '' end)}
+     default_user_agent = "ruby-image-charts/" + (if spec then spec.version.to_s else 'latest' end) + (if @_query.has_key?('icac') then " (#{@_query['icac']})" else '' end)
+     @request_headers = {"user-agent" => (@_user_agent || default_user_agent)}
 
      http = Net::HTTP.new(@_host, @_port)
 
@@ -544,6 +546,7 @@ class ImageCharts
       port: @_port,
       timeout: @_timeout,
       secret: @_secret,
+      user_agent: @_user_agent,
       previous: add)
   end
 
