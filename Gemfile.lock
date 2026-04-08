@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    image-charts (6.1.53)
+    image-charts (6.1.54)
 
 GEM
   remote: https://rubygems.org/
@@ -16,4 +16,4 @@ DEPENDENCIES
   minitest (~> 5.25)
 
 BUNDLED WITH
-  4.0.9
+  4.0.10
