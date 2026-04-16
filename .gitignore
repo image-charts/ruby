@@ -2,3 +2,7 @@
 coverage
 .env
 *.log
+node_modules/
+out/
+solution-src/
+*.tsbuildinfo
