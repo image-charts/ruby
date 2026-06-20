@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    image-charts (6.1.97)
+    image-charts (6.1.98)
 
 GEM
   remote: https://rubygems.org/
