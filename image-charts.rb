@@ -114,7 +114,7 @@ class ImageCharts
       _clone 'cht', value
     end
   
-    # chart data
+    # chart data. At most 1,000 series, chm line markers included, and 10,080 points in total.
     #
     # [Reference documentation]{@link https://documentation.image-charts.com/reference/data-format/}
     # # @example
@@ -123,7 +123,7 @@ class ImageCharts
     # chart = ImageCharts().chd('s:BTb19_,Mn5tzb')
     # chart = ImageCharts().chd('e:BaPoqM2s,-A__RMD6')
     # 
-    # chart data
+    # chart data. At most 1,000 series, chm line markers included, and 10,080 points in total.
     def chd(value)
       _clone 'chd', value
     end
@@ -208,7 +208,7 @@ class ImageCharts
     # # @example
     # chart = ImageCharts().chdl('NASDAQ|FTSE100|DOW')
     # 
-    # Text for each series, to display in the legend
+    # Text for each series, to display in the legend. Each text between pipes holds at most 10,000 characters. The texts of chtt, chdl, chl and chxl hold at most 10,000 characters together that are not printable ASCII: accented letters, other scripts, emoji and line breaks.
     def chdl(value)
       _clone 'chdl', value
     end
@@ -224,7 +224,7 @@ class ImageCharts
       _clone 'chdls', value
     end
   
-    # Solid or dotted grid lines
+    # Solid or dotted grid lines. A dashed grid needs at least 1 pixel per dash or space on average.
     #
     # [Reference documentation]{@link https://documentation.image-charts.com/reference/grid-lines/}
     # # @example
@@ -233,7 +233,7 @@ class ImageCharts
     # chart = ImageCharts().chg('1,1,FF00FF')
     # chart = ImageCharts().chg('1,1,1,1,CECECE')
     # 
-    # Solid or dotted grid lines
+    # Solid or dotted grid lines. A dashed grid needs at least 1 pixel per dash or space on average.
     def chg(value)
       _clone 'chg', value
     end
@@ -255,13 +255,13 @@ class ImageCharts
       _clone 'chco', value
     end
   
-    # chart title
+    # chart title. Each text between pipes holds at most 10,000 characters. The texts of chtt, chdl, chl and chxl hold at most 10,000 characters together that are not printable ASCII: accented letters, other scripts, emoji and line breaks.
     #
     # [Reference documentation]{@link https://documentation.image-charts.com/reference/chart-title/}
     # # @example
     # chart = ImageCharts().chtt('My beautiful chart')
     # 
-    # chart title
+    # chart title. Each text between pipes holds at most 10,000 characters. The texts of chtt, chdl, chl and chxl hold at most 10,000 characters together that are not printable ASCII: accented letters, other scripts, emoji and line breaks.
     def chtt(value)
       _clone 'chtt', value
     end
@@ -286,7 +286,7 @@ class ImageCharts
     # chart = ImageCharts().chxt('x,x,y')
     # chart = ImageCharts().chxt('x,y,t,r,t')
     # 
-    # Display values on your axis lines or change which axes are shown
+    # Display values on your axis lines or change which axes are shown. At most 100 axes.
     def chxt(value)
       _clone 'chxt', value
     end
@@ -298,7 +298,7 @@ class ImageCharts
     # chart = ImageCharts().chxl('0:|Jan|July|Jan')
     # chart = ImageCharts().chxl('0:|Jan|July|Jan|1|10|20|30')
     # 
-    # Custom string axis labels on any axis
+    # Custom string axis labels on any axis. Each text between pipes holds at most 10,000 characters. The texts of chtt, chdl, chl and chxl hold at most 10,000 characters together that are not printable ASCII: accented letters, other scripts, emoji and line breaks.
     def chxl(value)
       _clone 'chxl', value
     end
@@ -314,7 +314,7 @@ class ImageCharts
     # chart = ImageCharts().chxs('0N*p*per-month,0000FF')
     # chart = ImageCharts().chxs('0N*e*,000000|1N*cUSD*Mil,FF0000|2N*2sz*,0000FF')
     # 
-    # Font size, color for axis labels, both custom labels and default label values
+    # Font size, color for axis labels, both custom labels and default label values. At most 100 styles, one per axis. Each number format after N holds at most 10,000 characters. An axis draws its format at each tick: at most 60,000 characters over all axes. A character in a font larger than 14 pixels counts once per 14 pixels of font size.
     def chxs(value)
       _clone 'chxs', value
     end
@@ -330,19 +330,19 @@ class ImageCharts
     # # @example
 
     # 
-    # compound charts and line fills
+    # compound charts and line fills. Each marker text holds at most 10,000 characters. The last N marker of a series draws its type and text at each point of the series: at most 60,000 characters over all series. Each label counts 20 characters on top of its text. A character in a font larger than 14 pixels counts once per 14 pixels of font size.
     def chm(value)
       _clone 'chm', value
     end
   
-    # line thickness and solid/dashed style
+    # line thickness and solid/dashed style. A dashed line needs at least 1 pixel per dash or space on average, and a line width at most 2 times its dash period. Dashed lines run through at most 1,000 points in total.
     #
     # [Reference documentation]{@link https://documentation.image-charts.com/line-charts/#line-styles}
     # # @example
     # chart = ImageCharts().chls('10')
     # chart = ImageCharts().chls('3,6,3|5')
     # 
-    # line thickness and solid/dashed style
+    # line thickness and solid/dashed style. A dashed line needs at least 1 pixel per dash or space on average, and a line width at most 2 times its dash period. Dashed lines run through at most 1,000 points in total.
     def chls(value)
       _clone 'chls', value
     end
@@ -354,7 +354,7 @@ class ImageCharts
     # chart = ImageCharts().chl('label1|label2')
     # chart = ImageCharts().chl('multi# line# label1|label2')
     # 
-    # bar, pie slice, doughnut slice and polar slice chart labels
+    # bar, pie slice, doughnut slice and polar slice chart labels. Each text between pipes holds at most 10,000 characters. The texts of chtt, chdl, chl and chxl hold at most 10,000 characters together that are not printable ASCII: accented letters, other scripts, emoji and line breaks. A QR code or a Graphviz chart reads chl as its data, without these limits. A Graphviz chart has its own limits on the DOT source: at most 50,000 characters and 6 levels of braces, 200 nodes and 400 edges. These engines take fewer: neato 70 nodes and 200 edges, twopi 70 nodes and 200 edges, osage 75 nodes and 200 edges, fdp 60 nodes and 200 edges, circo 55 nodes and 110 edges. These graph attributes take a plain decimal number: mclimit from 0 to 5; maxiter from 0 to 1,000; normalize from -100,000,000,000 to 100,000,000,000 (or true, false, yes, no); esep at least 0; dpi at least 0; resolution at least 0. A PNG of more than 16,000,000 pixels, a graph that draws more than 20,000 characters of text, or a line of more than 500 characters is refused: request the SVG output with `chof=.svg` to lift these three.
     def chl(value)
       _clone 'chl', value
     end
@@ -394,13 +394,13 @@ class ImageCharts
       _clone 'chdlp', value
     end
   
-    # Background Fills
+    # Background Fills. At most 100 gradient stops over all fills.
     #
     # [Reference documentation]{@link https://documentation.image-charts.com/reference/background-fill/}
     # # @example
     # chart = ImageCharts().chf('b0,lg,0,f44336,0.3,03a9f4,0.8')
     # @default 'bg,s,FFFFFF'
-    # Background Fills
+    # Background Fills. At most 100 gradient stops over all fills.
     def chf(value)
       _clone 'chf', value
     end
@@ -429,14 +429,14 @@ class ImageCharts
       _clone 'chan', value
     end
   
-    # doughnut chart inside label
+    # doughnut chart inside label. The inside label holds at most 3,000 characters.
     #
     # [Reference documentation]{@link https://documentation.image-charts.com/pie-charts/#inside-label}
     # # @example
     # chart = ImageCharts().chli('95K€')
     # chart = ImageCharts().chli('45%')
     # 
-    # doughnut chart inside label
+    # doughnut chart inside label. The inside label holds at most 3,000 characters.
     def chli(value)
       _clone 'chli', value
     end
