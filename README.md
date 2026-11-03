@@ -631,7 +631,7 @@ Other allowed values are: <pre>p | p3 | pc | pd | ls | lc | lxy | ls:nda | lc:nd
 <a name="chxl"></a>
 #### `chxl( value )` : [`ImageCharts`](#constructor)
 
-> Custom string axis labels on any axis. Each text between pipes holds at most 10,000 characters. The texts of chtt, chdl, chl and chxl hold at most 10,000 characters together that are not printable ASCII: accented letters, other scripts, emoji and line breaks.
+> Custom string axis labels on any axis. Each text between pipes holds at most 10,000 characters. The texts of chtt, chdl, chl and chxl hold at most 10,000 characters together that are not printable ASCII: accented letters, other scripts, emoji and line breaks. A radar draws a ring per label, completed with blanks up to the longest chd series minus its last value: at most 1,000 rings, and 100,000 ring corners with its spokes.
 
 > [Reference](https://documentation.image-charts.com/reference/chart-axis/#custom-axis-labels)
 
