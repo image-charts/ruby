@@ -441,13 +441,13 @@ class ImageCharts
       _clone 'chli', value
     end
   
-    # image-charts enterprise `account_id`
+    # Image-Charts paid plan `account_id`
     #
     # [Reference documentation]{@link https://documentation.image-charts.com/enterprise/}
     # # @example
     # chart = ImageCharts().icac('accountId')
     # 
-    # image-charts enterprise `account_id`
+    # Image-Charts paid plan `account_id`
     def icac(value)
       _clone 'icac', value
     end

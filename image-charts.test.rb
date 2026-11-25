@@ -66,9 +66,10 @@ def test_can_instance_without_new
   end
 
   def test_rejects_if_timeout_is_reached
-    # Net::OpenTimeout is raised when timeout is reached
-    # The error message format varies by Ruby version, so we only verify the exception type
-    assert_raises Net::OpenTimeout do
+    # The timeout applies to both the connection and the response.
+    # A fast connection reaches the response first: Net::ReadTimeout.
+    # The message varies by Ruby version, so only the type is checked.
+    assert_raises Net::OpenTimeout, Net::ReadTimeout do
       ImageCharts(timeout: 0.01).cht('p').chd('t:1,2,3').chs('100x100').chan('1200').to_blob
     end
   end

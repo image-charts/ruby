@@ -79,22 +79,22 @@ ImageCharts.new( [ options ] )
 timeout: 5000,
 
 #
-# (Enterprise and Enterprise+ subscription only) SECRET_KEY
+# (paid plans: Business, Enterprise) SECRET_KEY
 #
 secret: nil,
 
 #
-# (Enterprise, Enterprise+ and On-Premise subscription only) custom domain
+# (paid plans: Business, Enterprise, and On-Premise) custom domain. An Image-Charts custom domain has no TLS: set protocol to "http" and port to 80
 #
 host: 'image-charts.com',
 
 #
-# (On-Premise subscription only) custom protocol
+# custom protocol ("http" with a custom domain)
 #
 protocol: 'https',
 
 #
-# (On-Premise subscription only) custom port
+# custom port (80 with a custom domain)
 #
 port: 443,
 
@@ -219,7 +219,7 @@ puts chart_url # "data:image/png;base64,iVBORw0KGgo...
 
 #### Enterprise Support
 
-Image-Charts Enterprise and Enterprise+ subscriptions remove the watermark and enable advanced features like custom-domain, high-resolution charts, custom fonts, multiple axis and mixed charts.
+Every paid plan (Business, Enterprise) removes the watermark and gives you a custom domain. The Enterprise plan (Enterprise+ in the reference documentation) adds high-resolution charts, custom fonts, multiple axes and mixed charts.
 
 - [Pricing and plan comparison](https://www.image-charts.com/pricing)
 - [Enterprise documentation](https://documentation.image-charts.com/enterprise/)
@@ -240,7 +240,7 @@ chart_url = ImageCharts({secret: 'SECRET_KEY'})
 .chd('t:60,40') # 2 data points: 60 and 40
 .chl('Hello|World') # 1 label per pie slice : "Hello" and "World"
 .chf('ps0-0,lg,45,ffeb3b,0.2,f44336,1|ps0-1,lg,45,8bc34a,0.2,009688,1') # 1 gradient per pie slice
-.icretina('1') # enable paid-only features like high-resolution charts
+.icretina('1') # enable Enterprise plan features like high-resolution charts
 .to_url # get the whole (HMAC signed) URL
 
 puts chart_url
@@ -276,7 +276,7 @@ chart_url = ImageCharts(
     .chd('t:60,40') # 2 data points: 60 and 40
     .chl('Hello|World') # 1 label per pie slice : "Hello" and "World"
     .chf('ps0-0,lg,45,ffeb3b,0.2,f44336,1|ps0-1,lg,45,8bc34a,0.2,009688,1') # 1 gradient per pie slice
-    .icretina('1') # enable paid-only features like high-resolution charts
+    .icretina('1') # enable Enterprise plan features like high-resolution charts
     .to_url # get the whole (HMAC signed) URL
 
 puts chart_url;
@@ -895,7 +895,7 @@ label1|label2")</pre></a>
 <a name="icac"></a>
 #### `icac( value )` : [`ImageCharts`](#constructor)
 
-> image-charts enterprise `account_id`
+> Image-Charts paid plan `account_id`
 
 > [Reference](https://documentation.image-charts.com/enterprise/)
 
